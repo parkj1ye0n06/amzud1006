@@ -1,6 +1,6 @@
 export default [
   {
-    mainImg: `../img/zoobox_main_bg.png`,
+    mainImg: `@/img/zoobox_main_bg.png`,
     mainTitle: "ZOOBOX 웹사이트 제작",
     mainText: `반려동물 백화점이라는 새로운 라이프스타일을 제시하는 쥬박스가  2021년  오픈되었습니다. 
 원스톱 쇼핑라이프라는 새롭고 다양한 경험을 즐길 수 있는 반려동물 랜드마크를 컨셉으로 
@@ -9,7 +9,7 @@ export default [
     client: "ZOOBOX",
     releaseDate: "2021",
     type: "반응형 웹",
-    img1: "../img/zoobox_img1.png",
+    img1: "@/img/zoobox_img1.png",
     img2: "./img/zoobox_img2.png",
     img3: "./img/zoobox_img3.png",
     img4: "./img/zoobox_img4.png",

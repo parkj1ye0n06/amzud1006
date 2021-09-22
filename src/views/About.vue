@@ -6,10 +6,35 @@
     <h1>{{ $store.state.Portfolio[0].mainTitle }}</h1>
     <h6>{{ $store.state.Portfolio[0].mainText }}</h6>
     <img :src="`${$store.state.Portfolio[0].img1}`" alt="" />
+    <p>
+      {{ $store.state.Portfolio[0].type }}
+    </p>
+    <p>
+      {{ $store.state.Portfolio[0].concept }}
+    </p>
+    <p class="event" v-if="fade === 1">
+      {{ $store.state.Portfolio[0].subText }}
+    </p>
+    <button @click="event()">좌표확인</button>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      fade: 0,
+    };
+  },
+  methods: {
+    event() {
+      const div = document.querySelector(".event");
+      const divRect = div.getBoundingClientRect().y;
+      if (divRect < 1050) {
+        this.fade = 1;
+      }
+    },
+  },
+};
 </script>
 <style>
 body,
@@ -32,5 +57,9 @@ h1 {
 img {
   width: 500px;
   height: 500px;
+}
+button {
+  width: 200px;
+  height: 50px;
 }
 </style>
